@@ -1,3 +1,4 @@
+#camera test
 import cv2
 
 vid_cam = cv2.VideoCapture(0)

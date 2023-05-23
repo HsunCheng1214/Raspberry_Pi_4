@@ -1,3 +1,4 @@
+# Human pose
 import cv2
 import mediapipe as mp
 mp_drawing = mp.solutions.drawing_utils
@@ -8,7 +9,7 @@ pose = mp_pose.Pose(min_detection_confidence=0.5,
                     min_tracking_confidence=0.5)
                     
 while cap.isOpened():
-    ret, frame = qcap.read()
+    ret, frame = cap.read()
     if ret:
         frame = cv2.flip(frame, 0)
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
